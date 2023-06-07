@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libreria equinodoro</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/bf225410e4.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="containerHeader">
+            <div>
+                <img class="logo" src="./assets/logo.png" alt="Logo">
+            </div>
+            <div>
+                <h1>Equinodoro</h1>
+                <h2>Libreria para la familia</h2>
+            </div>
+        </div>
+    </header>
+    <main> 
+        <div class="container-xl row m-auto border border-4">
+            <div class="col-12 col-md-6">
+                <h2>Ingrese nuevo titulo</h2>
+                <p>En el siguiente formulario puede ingresar nuevos titulos al catalogo de libros en venta</p>
+            </div> 
+            <div class="col-12 col-md-6">  
+            <form id="crearItem" class="formularioItem">
+                <textarea type="text" name="titulo" placeholder="titulo del libro" minlength="10" maxlength="100" required></textarea>
+                <textarea type="text" name="autor" placeholder="autor del libro" minlength="10" maxlength="100" required></textarea>
+                <textarea type="text" name="sinopsis" placeholder="sinopsis" minlength="20" maxlength="240"></textarea>
+                <textarea type="text" name="editorial" placeholder="nombre de editorial" required></textarea>
+                <input type="number" name="edicion" placeholder="año de edicion" required>     
+                <input type="number" name="isbn" placeholder="ISBN del libro" required>
+                <input type="number" name="precio" placeholder="valor del libro" min="2500" max="250000" required>
+                <input type="number" name="stock" placeholder="stock del titulo" min="1" required>
+                <select name="tematica">
+                    <option value="maternidad">Maternidad</option>
+                    <option value="crianza">Crianza</option>
+                    <option value="infantil">Literatura infantil</option>
+                    <option value="literatura">Literatura general</option>
+                </select>
+                <button type="submit">Crear item</button>
+            </form>
+            </div>
+        </div>
+        <div id="tarjetasItems" class="tarjetasItems">
+        </div>
+    </main>
+
+    <footer>
+
+
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script> 
+</body>
+</html>
